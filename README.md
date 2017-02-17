@@ -6,12 +6,12 @@ The ecosystem is a 40x40 grid in which each cell may be inhabited by a single cr
 
 The predator's behaviors in its event function follows these rules
 - If adjacent to a prey, it will eat the prey. There is a 45 % chance to give birth on the prey's position.
-- There is a 50 % chance to die if the predator has not eaten or given birth
-- If adjacent to empty space, it will move towards the empty space
+- There is a 50 % chance to die if the predator has not eaten or given birth.
+- If adjacent to empty space, it will move towards the empty space.
 
 The prey's behaviors in its event function follows these rules
 - If adjacent to a predator, there is a 45 % chance to die.
-- If adjacent to empty space, there is a 66 % chance to give birth on the empty space. If it did not give birth, it will move  towards the empty space
+- If adjacent to empty space, there is a 66 % chance to give birth on the empty space. If it did not give birth, it will move  towards the empty space.
 
 Note that if a creature is adjacent to multiple cells that satisfy its behavioral requirements, it will randomly select one cell to act on.
 
