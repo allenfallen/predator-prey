@@ -1,5 +1,6 @@
 # Predator Prey
-2D predator prey simulation using ncurses for displaying the grid and SFML for displaying the population time graph.2
+2D predator prey simulation using ncurses for displaying the grid and SFML for displaying the population time graph.
+Also check out the [trait-model](https://github.com/allenfallen/predator-prey/tree/trait-model) branch for a different outlook on the predator-prey behavioral model.
 
 # Model
 The ecosystem is a 40x40 grid in which each cell may be inhabited by a single creature. The grid is initialized with 5 % of it being composed of predators and 12 % of it being composed of prey at random locations. While the simulation is running, the program loops through the entire grid to call each creature's event function.
