@@ -9,7 +9,7 @@
 
 // Constants
 #define PREY_BIRTH_RATE 660
-#define PREY_DEATH_RATE 300
+#define PREY_DEATH_RATE 450
 
 class prey : public creature, public moves, public breeds, public dies
 {
