@@ -1,5 +1,6 @@
 # Predator Prey
 2D predator prey simulation using ncurses for displaying the grid and SFML for displaying the population time graph.
+
 Also check out the [trait-model](https://github.com/allenfallen/predator-prey/tree/trait-model) branch for a different outlook on the predator-prey behavioral model.
 
 # Model
