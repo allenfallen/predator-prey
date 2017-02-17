@@ -15,7 +15,7 @@ The prey's behaviors in its event function follows these rules
 
 Note that if a creature is adjacent to multiple cells that satisfy its behavioral requirements, it will randomly select one cell to act on.
 
-This model results in a predictable and cyclical change in population sizes similar to the Lotka–Volterra model. However,there is a moderate chance that random perturbations may lead to the extinction of a species.
+This model results in a predictable and cyclical change in population sizes similar to the Lotka–Volterra model. However, there is a moderate chance that random perturbations may lead to the extinction of a species.
 
 
 # Dependencies
