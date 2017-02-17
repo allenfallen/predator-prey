@@ -9,8 +9,8 @@
 #include "../../abstract/eats/eats.h"
 
 // Constants
-#define PREDATOR_DEATH_RATE 500
-#define PREDATOR_BIRTH_RATE 450
+#define PREDATOR_DEFAULT_HEALTH 10
+#define PREDATOR_EAT_COUNT_TO_BREED 30
 
 class predator : public creature, public moves, public eats, public breeds, public dies
 {

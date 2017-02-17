@@ -8,6 +8,7 @@ class moves
         virtual bool movePolicy() = 0;
 
     protected:
+        unsigned int steps;
 };
 
 #endif // MOVES_H

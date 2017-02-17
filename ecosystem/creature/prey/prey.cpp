@@ -2,14 +2,21 @@
 
 prey::prey(creature*** grid, const coordinate &gridMax, int i, int j) : creature(grid, gridMax, i, j)
 {
+    health = PREY_DEFAULT_HEALTH;
+    steps = 0;
+    sex = rand()%2;
 }
 
 prey::prey(creature*** grid, const coordinate &gridMax, const coordinate& pos) : creature(grid, gridMax, pos)
 {
+    health = PREY_DEFAULT_HEALTH;
+    steps = 0;
+    sex = rand()%2;
 }
 
 prey::~prey()
 {
+    health = steps = sex = NULL;
 }
 
 void prey::event()
@@ -22,6 +29,9 @@ void prey::event()
 
     else if(movePolicy())
         move();
+
+    else
+        health--;
 }
 
 void prey::move()
@@ -36,12 +46,13 @@ void prey::move()
     grid[position.row][position.col] = nullptr;
 
     // Assign new stat values
-    this->position = other;
+    position = other;
+    steps++;
 }
 
 bool prey::movePolicy()
 {
-    return nextTo(' ');
+    return nextTo(' ') && rand()%10 < 9;
 }
 
 void prey::breed()
@@ -55,13 +66,19 @@ void prey::breed()
 
 bool prey::breedPolicy()
 {
-    return nextTo(' ') && (rand()%1000 < PREY_BIRTH_RATE);
+    return nextTo(' ') && steps && !(steps % PREY_STEPS_TO_BREED);
+//    if(nextTo('0'))
+//    {
+//        coordinate posOfMate = getPositionOf('0');
+//        return canBreedWith(posOfMate) && nextTo(' ') && steps && !(steps % PREY_STEPS_TO_BREED);
+//    }
+//    return false;
 }
 
 bool prey::canBreedWith(const coordinate &pos)
 {
-//    prey* ptr = (prey*)grid[pos.row][pos.col];
-//    return this->sex ^ ptr->sex;
+    prey* ptr = (prey*)grid[pos.row][pos.col];
+    return this->sex ^ ptr->sex;
 }
 
 void prey::die()
@@ -71,7 +88,7 @@ void prey::die()
 
 bool prey::diePolicy()
 {
-    return nextTo('X') && (rand()%1000 < PREY_DEATH_RATE);
+    return health < 0;
 }
 
 char prey::face()

@@ -99,8 +99,8 @@ void ecosystem::createGrid()
 void ecosystem::loadGrid()
 {
     // Spawn creatures
-    spawn('0', gridMax.row * gridMax.col * 0.12);
-    spawn('X', gridMax.row * gridMax.col * 0.05);
+    spawn('0', gridMax.row * gridMax.col * 0.25);
+    spawn('X', gridMax.row * gridMax.col * 0.1);
 }
 
 void ecosystem::deleteGrid()

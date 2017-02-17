@@ -14,11 +14,11 @@ class breeds
 
         inline bool getSex()
         {
-//            return sex;
+            return sex;
         }
 
     protected:
-//        bool sex;
+        bool sex;
 };
 
 

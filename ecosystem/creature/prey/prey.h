@@ -8,8 +8,8 @@
 #include "../../abstract/dies/dies.h"
 
 // Constants
-#define PREY_BIRTH_RATE 660
-#define PREY_DEATH_RATE 300
+#define PREY_DEFAULT_HEALTH 10
+#define PREY_STEPS_TO_BREED 5
 
 class prey : public creature, public moves, public breeds, public dies
 {

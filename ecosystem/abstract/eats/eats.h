@@ -8,6 +8,7 @@ class eats
         virtual bool eatPolicy() = 0;
 
     protected:
+        unsigned int eatCount;
 };
 
 #endif // EATS_H

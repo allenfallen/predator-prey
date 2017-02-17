@@ -32,7 +32,7 @@ bool creature::nextTo(char face, int radius)
         for(int j = position.col - radius; j < position.col + radius + 1; j++)
 
             // Within boundaries of the grid
-            if(i >= 0 && j >= 0 && i < 40 && j < 40)
+            if(i >= 0 && j >= 0 && i < gridMax.row && j < gridMax.col)
 
                 // Meets face requirement
                 if((!grid[i][j] && face == ' ') || grid[i][j] && grid[i][j]->face() == face)
@@ -51,7 +51,7 @@ coordinate creature::getPositionOf(char face, int radius)
         for(int j = position.col - radius; j < position.col + radius + 1; j++)
 
             // Within boundaries of the grid
-            if(i >= 0 && j >= 0 && i < 40 && j < 40)
+            if(i >= 0 && j >= 0 && i < gridMax.row && j < gridMax.col)
 
                 // Meets face requirement
                 if((!grid[i][j] && face == ' ') || (grid[i][j] && grid[i][j]->face() == face))
