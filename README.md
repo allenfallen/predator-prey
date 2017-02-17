@@ -6,7 +6,7 @@ The ecosystem is a 40x40 grid in which each cell may be inhabited by a single cr
 
 The predator's behaviors in its event function follows these rules and will perform one action out of the following:
 - If adjacent to a prey, it will eat the prey. There is a 45 % chance to give birth on the prey's position.
-- There is a 50 % chance to die if the predator has not eaten or given birth.
+- If the predator has not eaten or given birth, there is a 50 % chance to die.
 - If adjacent to empty space, it will move towards the empty space.
 
 The prey's behaviors in its event function follows these rules and will perform one action out of the following:
