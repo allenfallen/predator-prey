@@ -28,8 +28,8 @@ This model results in a predictable and cyclical change in population sizes simi
 - [ncurses 6.0] (https://www.gnu.org/software/ncurses/)
 
 # Screenshots
-![grid](screenshots/grid.png)
-![graph](screenshots/graph.png)
+![grid](screenshots/grid.gif)
+![graph](screenshots/graph.gif)
 
 # License
 This project is released under MIT License. Please review the [License file](LICENSE) for more details.
